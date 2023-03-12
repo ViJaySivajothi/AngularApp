@@ -1,0 +1,11 @@
+{
+  "Product": [
+    {
+      "name": "pen",
+      "color": "blue",
+      "price": 50,
+      "id": 1,
+      "phone": 40
+    }
+  ]
+}

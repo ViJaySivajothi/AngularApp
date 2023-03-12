@@ -1,0 +1,27 @@
+<div id="main">
+    <h2>ADD PRODUCT</h2>
+    <form>
+        <table>
+            <tr>
+                <td> <label>Name : </label>
+                </td>
+                <td> <input type="text" name="name" [(ngModel)]="productObj.name" class="form-control">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Color : </label></td>
+                <td> <input type="text" name="color" [(ngModel)]="productObj.color" class="form-control"></td>
+            </tr>
+            <tr>
+                <td><label>Price : </label></td>
+                <td> <input type="number" name="price" [(ngModel)]="productObj.price" class="form-control"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" value="Add" class="btn btn-primary" (click)="addProduct(productObj)"> &nbsp;
+                    <input type="button" value="Product's List" class="btn btn-success" routerLink="/list">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>

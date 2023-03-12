@@ -1,0 +1,29 @@
+<div class="container">
+    <h2>LIST PRODUCT</h2>
+    <input type="button" value="Add Product" class="btn btn-info" routerLink="/add"><br><br>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Color</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of plist;let i=index">
+                <td>{{i+1}}</td>
+                <td>{{p.id}}</td>
+                <td>{{p.name}}</td>
+                <td>{{p.color}}</td>
+                <td>{{p.price}}</td>
+                <td>
+                    <span class="btn btn-warning btn-sm" routerLink="/edit/{{p.id}}">Edit</span> &nbsp;
+                    <span class="btn btn-danger btn-sm" (click)="removeProduct(p.id)">Delete</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

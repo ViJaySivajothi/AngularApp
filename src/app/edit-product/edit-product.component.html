@@ -1,0 +1,21 @@
+<div id="main">
+    <h2>EDIT RODUCT</h2>
+    <form>
+        <p>
+            <label>Name</label>
+            <input type="text" name="name" class="form-control" [(ngModel)]="prolist.name">
+        </p>
+        <p>
+            <label>Color</label>
+            <input type="text" name="color" class="form-control" [(ngModel)]="prolist.color">
+        </p>
+        <p>
+            <label>Price</label>
+            <input type="number" name="price" class="form-control" [(ngModel)]="prolist.price">
+        </p>
+        <p>
+            <input type="button" value="Update" class="btn btn-primary" (click)="updateInfo(prolist.id,prolist)"> &nbsp;
+            <input type="button" value="Back" class="btn btn-success" routerLink="/list">
+        </p>
+    </form>
+</div>
